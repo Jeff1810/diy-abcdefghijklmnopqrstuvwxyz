@@ -1,0 +1,12 @@
+static=Global 代理, China 直连, US 美国, HK 香港, JP 日本, TW 台湾, KR 韩国, SG 新加坡, proxy, reject, direct, img-url=https://raw.githubusercontent.com/Orz-3/face/master/Global.png
+static=China 直连, proxy, direct, reject, img-url=https://raw.githubusercontent.com/Orz-3/face/master/China.png
+static=Netflix 奈飞, server-tag-regex=.*, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png
+static=Spotify 音乐, China 直连, HK 香港, US 美国, proxy, reject, img-url=https://raw.githubusercontent.com/Aoyt520/jiumeiquanX/master/quanX/Spotify.png
+static=Apple 苹果, Global 代理, China 直连, US 美国, HK 香港, JP 日本, img-url=https://raw.githubusercontent.com/Orz-3/face/master/Apple.png
+static=PayPal, China 直连, US 美国, HK 香港, proxy, direct, img-url=https://raw.githubusercontent.com/Aoyt520/jiumeiquanX/master/quanX/paypal.png
+static= US 美国, server-tag-regex= 美国|🇺🇸|US, img-url=https://raw.githubusercontent.com/Orz-3/face/master/US.png
+static= HK 香港, server-tag-regex= 香港|🇭🇰|HK, img-url=https://raw.githubusercontent.com/Orz-3/face/master/HK.png
+static= TW 台湾, server-tag-regex= 台湾|🇹🇼|TW, img-url=https://raw.githubusercontent.com/Orz-3/face/master/TW.png
+static= JP 日本, server-tag-regex= 日本|🇯🇵|JP, img-url=https://raw.githubusercontent.com/Orz-3/face/master/JP.png
+static= KR 韩国, server-tag-regex= 韩国|🇰🇷|KR, img-url=https://raw.githubusercontent.com/Orz-3/face/master/KR.png
+static= SG 新加坡, server-tag-regex= 新加坡|🇸🇬|SG|狮城, img-url=https://raw.githubusercontent.com/Orz-3/face/master/SG.png
