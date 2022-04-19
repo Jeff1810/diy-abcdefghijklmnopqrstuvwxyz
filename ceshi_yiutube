@@ -1,0 +1,20 @@
+// Scriptable使用的变量。
+// 这些必须位于文件的最顶部。不要编辑。
+//图标颜色：深紫色；图标字形：图像；
+// ==UserScript==
+// @name YouTube字幕翻译
+// @name:zh-CN ACT.YouTube.DM。自动翻译
+// @description 自动翻译任何非指定语言 Subtitles/CC。
+// @description:zh-CN 自动翻译任何非指定语言字幕。
+// @author ACTCD
+// @version 20220327.3
+// @license GPL-3.0-或后来
+// @namespace ACTCD/Userscripts
+// @supportURL https://github.com/ACTCD/Userscripts#contact
+// @homepageURL https://github.com/ACTCD/Userscripts
+// @match *://*.youtube.com/*
+// @match *://www.youtube-nocookie.com/embed/*
+// @grant 无
+// @run-at document-start
+// ==/UserScript==
+（功能（）{“严格使用”；const inline_script = () => {const tlang = navigator.language || 'zh-CN'; // 指定语言 // 指定语言const cache = { req_url: null, obj_url: null };const XMLHttpRequest_open = XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open = function () {const url = new URL(arguments[1], location.href);if (url.pathname == '/api/timedtext') {const lang = url.searchParams.get('lang');如果（lang&&lang！= tlang) {const req_url = url.href;if (req_url == cache.req_url) {参数[1] = cache.obj_url;} else {URL.revokeObjectURL（cache.obj_url）；this.addEventListener('load', event => {cache.req_url = req_url;cache.obj_url = URL.createObjectURL(new Blob([this.responseText], { type: 'application/json' }));}）；url.searchParams.set('tlang', tlang);参数[1] = url.href；}}}XMLHttpRequest_open.apply（此，参数）；}；}const script = document.createElement("script");script.textContent = '(' + inline_script + ')();';如果 (document.head) {document.head.appendChild（脚本）；} else {new MutationObserver((mutationList, observer) => {document.head && (observer.disconnect() || document.head.append(script));}).observe(document, { subtree: true, childList: true });}})();
